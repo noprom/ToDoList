@@ -262,7 +262,7 @@
                     <navigationItem key="navigationItem" title="To-Do List" id="Y77-GV-Of6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yPi-xm-fqC">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="V1N-ra-vCS"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="V1N-ra-vCS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
