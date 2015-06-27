@@ -271,7 +271,7 @@
             </objects>
             <point key="canvasLocation" x="925" y="334"/>
         </scene>
-        <!--View Controller-->
+        <!--Add To-Do Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -295,7 +295,10 @@
                             <constraint firstAttribute="centerX" secondItem="Mb6-cW-ZTb" secondAttribute="centerX" id="qMv-Bx-ydl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hu1-XG-r3I"/>
+                    <navigationItem key="navigationItem" title="Add To-Do Item" id="hu1-XG-r3I">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Kai-hm-UcQ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="3TN-cH-0fX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
