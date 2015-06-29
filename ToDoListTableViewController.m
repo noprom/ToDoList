@@ -112,4 +112,16 @@
 }
 */
 
+/*设置每次点击后该item的状态*/
+- (void)tableView:(UITableView *)tableView didSelectAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // 点击后不选中
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    // 找到所点击的item
+    ToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    // 重新加载数据
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
 @end
