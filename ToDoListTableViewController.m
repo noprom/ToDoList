@@ -58,12 +58,19 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //绑定视图
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
     
     // 得到每一项
     ToDoItem *todoItem = [self.toDoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = todoItem.itemName;
     
+    // 设置item的样式
+    if(todoItem.completed){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark; //选中状态
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone; //不选中
+    }
     return cell;
 }
 
@@ -113,7 +120,7 @@
 */
 
 /*设置每次点击后该item的状态*/
-- (void)tableView:(UITableView *)tableView didSelectAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     // 点击后不选中
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -123,5 +130,6 @@
     // 重新加载数据
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
+
 
 @end
