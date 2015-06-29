@@ -8,6 +8,8 @@
 
 #import "ToDoListTableViewController.h"
 #import "ToDoItem.h"
+#import "AddToDoItemViewController.h"
+
 @interface ToDoListTableViewController ()
 
 @property NSMutableArray *toDoItems;
@@ -16,9 +18,14 @@
 
 @implementation ToDoListTableViewController
 
-// 从AddToDoItem 返回到ToDoList
+// 从AddToDoItem 返回到ToDoList 响应的事件
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue{
-    
+    AddToDoItemViewController *source = [segue sourceViewController];
+    ToDoItem *item = source.toDoItem;
+    if(item != nil){
+        [self.toDoItems addObject:item];
+        [self.tableView reloadData];    //重新加载数据
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
