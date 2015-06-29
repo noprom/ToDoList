@@ -16,7 +16,7 @@
     [self setCompletionDate];
 }
 
-/*私有方法*/
+/*私有方法,不在.h文件中申明*/
 - (void)setCompletionDate{
     if(self.completed){
         self.completionDate = [NSDate date];
