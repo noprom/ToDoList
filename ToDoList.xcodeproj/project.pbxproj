@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804705511B416CEE00E4364F /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 804705501B416CEE00E4364F /* ToDoItem.m */; };
 		807D915A1B3B613400E204E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 807D91591B3B613400E204E6 /* main.m */; };
 		807D915D1B3B613400E204E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 807D915C1B3B613400E204E6 /* AppDelegate.m */; };
 		807D91631B3B613400E204E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807D91611B3B613400E204E6 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8047054F1B416CEE00E4364F /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		804705501B416CEE00E4364F /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 		807D91541B3B613400E204E6 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807D91581B3B613400E204E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807D91591B3B613400E204E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 		807D914B1B3B613400E204E6 = {
 			isa = PBXGroup;
 			children = (
+				8047054F1B416CEE00E4364F /* ToDoItem.h */,
+				804705501B416CEE00E4364F /* ToDoItem.m */,
 				80A67D7C1B3E7C2900519573 /* ToDoListTableViewController.h */,
 				80A67D7D1B3E7C2900519573 /* ToDoListTableViewController.m */,
 				807D91561B3B613400E204E6 /* ToDoList */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				807D915D1B3B613400E204E6 /* AppDelegate.m in Sources */,
+				804705511B416CEE00E4364F /* ToDoItem.m in Sources */,
 				80A67D7E1B3E7C2900519573 /* ToDoListTableViewController.m in Sources */,
 				807D915A1B3B613400E204E6 /* main.m in Sources */,
 				80A67D7B1B3E7A5F00519573 /* AddToDoItemViewController.m in Sources */,

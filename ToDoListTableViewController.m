@@ -7,8 +7,10 @@
 //
 
 #import "ToDoListTableViewController.h"
-
+#import "ToDoItem.h"
 @interface ToDoListTableViewController ()
+
+@property NSMutableArray *toDoItems;
 
 @end
 
@@ -20,12 +22,23 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.toDoItems = [[NSMutableArray alloc]init];
+    [self loadInitialData];// 加载初始化的数据
+}
+
+/*加载数据*/
+- (void)loadInitialData{
+    ToDoItem *item1 = [[ToDoItem alloc]init];
+    item1.itemName = @"Buy milk";
+    [self.toDoItems addObject:item1];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    ToDoItem *item2 = [[ToDoItem alloc] init];
+    item2.itemName = @"Buy eggs";
+    [self.toDoItems addObject:item2];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    ToDoItem *item3 = [[ToDoItem alloc] init];
+    item3.itemName = @"Read a book";
+    [self.toDoItems addObject:item3];
 }
 
 - (void)didReceiveMemoryWarning {
